@@ -1,0 +1,60 @@
+:root {
+  --bg-top: #1A1036;
+  --bg-bottom: #0B0A1A;
+  --card: rgba(255, 255, 255, 0.07);
+  --line: rgba(255, 255, 255, 0.14);
+  --text: #F5F3FF;
+  --muted: #A9A3C9;
+  --cyan: #22D3EE;
+  --violet: #A78BFA;
+  --pink: #FF3D7F;
+  --orange: #FF8A3D;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg-bottom); }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(167, 139, 250, 0.28), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(255, 61, 127, 0.16), transparent 50%),
+    linear-gradient(var(--bg-top), var(--bg-bottom));
+  font: 16px/1.7 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+header img { width: 68px; height: 68px; border-radius: 16px; box-shadow: 0 0 28px rgba(255, 61, 127, 0.35); }
+header h1 {
+  margin: 0; font-size: 28px; font-weight: 900; letter-spacing: 1px;
+  background: linear-gradient(90deg, var(--cyan), var(--violet), var(--pink));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+header p { margin: 0; color: var(--muted); }
+nav.lang { margin: 0 0 24px; font-size: 15px; }
+nav.lang a { margin-right: 12px; }
+a { color: var(--cyan); text-decoration: none; }
+a:hover { text-decoration: underline; }
+section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 8px 24px 16px;
+  margin-bottom: 20px;
+}
+h2 { font-size: 20px; margin: 20px 0 8px; }
+h3 { font-size: 17px; margin: 18px 0 4px; }
+ul { padding-left: 20px; }
+.muted { color: var(--muted); font-size: 14px; }
+.links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.links a {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--pink), var(--orange));
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 6px 20px rgba(255, 61, 127, 0.35);
+}
+.links a:hover { text-decoration: none; opacity: .92; }
+footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 32px; }
